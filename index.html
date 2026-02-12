@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<script>
+    
+        let usuario = prompt ("Elige piedra, para papel o tijeras, escribe la primera letra en mayuscula: ");
+function jugador(){
+
+    if (usuario == "Piedra"){
+   return "Piedra";
+}
+else if(usuario == "Papel"){
+   return  "Papel";
+}
+else if(usuario == "Tijeras"){
+    return  "Tijeras";
+}
+else {
+    return "opción no valida";
+}
+}
+
+let numero = Math.floor(Math.random() * 3);
+let eleccion;
+
+if (numero === 0) {
+    eleccion = "Piedra";
+} else if (numero === 1) {
+    eleccion = "Papel";
+} else {
+    eleccion = "Tijeras";
+}
+
+function determinarGanador(usuario, eleccion) {
+    if (usuario === eleccion) {
+        return "Empate";
+    }
+
+    else if (
+        (usuario === "Piedra" && eleccion === "Tijeras") ||
+        (usuario === "Papel" && eleccion === "Piedra") ||
+        (usuario === "Tijeras" && eleccion === "Papel")
+    ) {
+        return "¡Ganaste!";
+    } else {
+        return "¡La PC gana!";
+    }
+}
+
+console.log("La PC eligió: " + eleccion)  
+console.log("Usuario: " + jugador());
+let resultado = determinarGanador(usuario, eleccion);
+console.log(resultado);
+console.log("Recarga la pagina para volver a jugar");
+
+</script>
+
+
+    
+</body>
+</html>
