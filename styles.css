@@ -1,0 +1,44 @@
+html, body{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    background-color: lightblue;
+    display: grid;
+  place-items: center;
+  height: 100vh;
+}
+
+.Box_1{
+     width: auto;
+     height: auto;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 19px;
+   
+}
+
+.Ilustracion{
+    height: auto;
+    width: auto;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    align-items: center;
+
+
+}
+
+.opciones{
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.imagen1{
+  width: 155px;
+  height: 250px;
+}

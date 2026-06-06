@@ -3,63 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+      <link rel="stylesheet" href="styles.css">
+    <title>Juego</title>
 </head>
 <body>
 
-<script>
-    
-        let usuario = prompt ("Elige piedra, para papel o tijeras, escribe la primera letra en mayuscula: ");
-function jugador(){
+  <h1>Juego: Piedra, Papel o Tijeras</h1>
+  <p>Selecciona una opción:</p>
 
-    if (usuario == "Piedra"){
-   return "Piedra";
-}
-else if(usuario == "Papel"){
-   return  "Papel";
-}
-else if(usuario == "Tijeras"){
-    return  "Tijeras";
-}
-else {
-    return "opción no valida";
-}
-}
+<div class="Box_1">
 
-let numero = Math.floor(Math.random() * 3);
-let eleccion;
+  <div class="Ilustracion">
+<img class="imagen1" src="https://pedidos.com/_next/image?url=https%3A%2F%2Fpedidos.com%2Fmyfotos%2FxLarge%2F(X)PIL-TIJ-1605.webp&w=1536&q=75" alt="Tijeras">
+<img class="imagen1" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWUfWwoqBZZyp23pZ_96xuPaKYw8bEq_3TTg&s" alt="Papel">
+<img class="imagen1" src="https://cementostorices.com/assets/images/jpg/construccion/tipos-de-piedras/piedra-pizarra-sobre-fondo-blanco_960x450.jpg" alt="Piedra">
+  </div>
 
-if (numero === 0) {
-    eleccion = "Piedra";
-} else if (numero === 1) {
-    eleccion = "Papel";
-} else {
-    eleccion = "Tijeras";
-}
+<div class="opciones">
+  <div class="boton1"><button>Tijeras</button></div>
+<div class="boton2"><button>Papel</button></div>
+<div class="boton3"><button>Piedra</button></div>
+</div>
 
-function determinarGanador(usuario, eleccion) {
-    if (usuario === eleccion) {
-        return "Empate";
-    }
+<div id ="Respuesta"></div>
 
-    else if (
-        (usuario === "Piedra" && eleccion === "Tijeras") ||
-        (usuario === "Papel" && eleccion === "Piedra") ||
-        (usuario === "Tijeras" && eleccion === "Papel")
-    ) {
-        return "¡Ganaste!";
-    } else {
-        return "¡La PC gana!";
-    }
-}
 
-console.log("La PC eligió: " + eleccion)  
-console.log("Usuario: " + jugador());
-let resultado = determinarGanador(usuario, eleccion);
-console.log(resultado);
-console.log("Recarga la pagina para volver a jugar");
+</div>
 
-</script>
+
+<script src = "script.js"></script>
 
 
     
